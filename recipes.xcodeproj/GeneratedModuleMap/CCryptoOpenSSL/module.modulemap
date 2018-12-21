@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Users/paullinck/GitHub/vapor/recipes/.build/checkouts/crypto.git-8438044888153764954/Sources/CCryptoOpenSSL/include"
+    export *
+}
