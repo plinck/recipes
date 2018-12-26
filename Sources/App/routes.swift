@@ -12,7 +12,7 @@ final class Ingredient : Content {
 
 // class for JSON encoding - content provides this
 final class Dish : Content {
-    var uuid: String?
+    var id: Int?
     var title: String
     var price: Double
     var description: String
@@ -20,7 +20,7 @@ final class Dish : Content {
     var ingredients: [Ingredient]
     
     init (title: String, price: Double, course: String, description: String, ingredients: [Ingredient] ) {
-        self.uuid = UUID().uuidString
+        //self.uuid = UUID().uuidString
 
         self.title = title
         self.price = price
@@ -54,7 +54,7 @@ public func routes(_ router: Router) throws {
         
         // Returing this in future - i.e. async request
         return Future.map(on: req, { () -> Dish in
-            data.uuid = UUID().uuidString
+            data.id = 1
             return data
         })
     }
